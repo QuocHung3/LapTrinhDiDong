@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:weightSum="10"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".signin">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/login" />
+        <TextView
+            android:textColor="@color/black"
+            android:textSize="50sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:background="#ebf5f6"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_weight="6"
+        android:padding="20dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textColor="#1a73e8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="User Name"/>
+        <EditText
+            android:id="@+id/signin_acc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#1a73e8"
+            android:text="Password"/>
+        <EditText
+            android:id="@+id/signin_pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:inputType="textPassword"/>
+
+        <Button
+            android:id="@+id/signin_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/round_button"
+            android:text="Sign in"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:textSize="15sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No account : "/>
+
+            <TextView
+                android:id="@+id/signup_tv"
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:text="Sign up"
+                android:textColor="#1a73e8"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
