@@ -18,10 +18,10 @@ public class SachDao {
         cursor.moveToFirst();
 
         while(!cursor.isAfterLast()) {
-            String maTG = cursor.getString(0);
-            String tenTG = cursor.getString(1);
-            String tenSach = cursor.getString(2);
-            String ngayXB = cursor.getString(3);
+            String maTG = cursor.getString(1);
+            String tenTG = cursor.getString(2);
+            String tenSach = cursor.getString(3);
+            String ngayXB = cursor.getString(4);
 
             Sach sach = new Sach(maTG,tenTG,tenSach,ngayXB);
 
@@ -64,6 +64,21 @@ public class SachDao {
 
         SQLiteDatabase db = dbHelper.getReadableDatabase();
         int row= db.delete("Sach","maTG = ?",new String[]{maTG + ""});
+
+        return (row>0);
+    }
+
+    public  static boolean insertSach(Context context,Sach sach) {
+        DBHelper dbHelper= new DBHelper(context);
+
+        SQLiteDatabase db = dbHelper.getReadableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("MaTG",sach.getMaTG());
+        values.put("TenTG",sach.getTenTG());
+        values.put("TenSach",sach.getTenSach());
+        values.put("NgayXB",sach.getNgayXB());
+
+        long row = db.insert("Sach",null,values);
 
         return (row>0);
     }

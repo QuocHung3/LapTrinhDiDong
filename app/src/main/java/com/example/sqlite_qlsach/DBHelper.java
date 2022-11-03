@@ -14,14 +14,14 @@ public class DBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
-        String sql = "create table Sach(MaTG text primary key,TenTG text,TenSach text,NgayXB text)";
+        String sql = "create table Sach(STT integer primary key autoincrement,MaTG text,TenTG text,TenSach text,NgayXB text)";
         sqLiteDatabase.execSQL(sql);
 
-        sql = "insert into Sach values ('tg01','Nguyen chi Cuong','Mot thoi de nho','02-07-2002')";
+        sql = "insert into Sach values (null,'tg01','Nguyen chi Cuong','Mot thoi de nho','02-07-2002')";
         sqLiteDatabase.execSQL(sql);
-        sql = "insert into Sach values ('tg02','Nguyen Nam','De men phieu luu ki','05-06-2001')";
+        sql = "insert into Sach values (null,'tg02','Nguyen Nam','De men phieu luu ki','05-06-2001')";
         sqLiteDatabase.execSQL(sql);
-        sql = "insert into Sach values ('tg03','Nguyen Van nguyen','lam di','09-12-2011')";
+        sql = "insert into Sach values (null,'tg03','Nguyen Van nguyen','lam di','09-12-2011')";
         sqLiteDatabase.execSQL(sql);
     }
 

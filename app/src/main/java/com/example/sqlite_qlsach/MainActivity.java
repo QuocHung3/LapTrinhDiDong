@@ -84,10 +84,6 @@ public class MainActivity extends AppCompatActivity {
                 etThemTenTG.setText("");
             }
         });
-
-
-
-
     }
 
 
