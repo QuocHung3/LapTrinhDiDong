@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp"
+    tools:context=".EditActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginVertical="10dp"
+        android:weightSum="10">
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Họ tên"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/edt_hoten"
+            android:layout_width="wrap_content"
+            android:hint="Nhập họ tên"
+            android:layout_height="wrap_content"
+            android:layout_weight="7"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginVertical="10dp"
+        android:weightSum="10">
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Năm sinh"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/edt_namsinh"
+            android:layout_width="wrap_content"
+            android:hint="Nhập năm sinh"
+            android:layout_height="wrap_content"
+            android:layout_weight="7"/>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginVertical="10dp"
+        android:weightSum="10">
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Lớp"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/edt_lop"
+            android:layout_width="wrap_content"
+            android:hint="Nhập lớp"
+            android:layout_height="wrap_content"
+            android:layout_weight="7"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginVertical="10dp"
+        android:weightSum="10">
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Điểm toán"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/edt_Diemtoan"
+            android:layout_width="wrap_content"
+            android:hint="Nhập Điểm toán"
+            android:layout_height="wrap_content"
+            android:layout_weight="7"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginVertical="10dp"
+        android:weightSum="10">
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Điểm tin"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/edt_diemtin"
+            android:layout_width="wrap_content"
+            android:hint="Nhập Điểm tin"
+            android:layout_height="wrap_content"
+            android:layout_weight="7"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginVertical="10dp"
+        android:weightSum="10">
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Điểm TA"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/edt_diemTA"
+            android:layout_width="wrap_content"
+            android:hint="Nhập Điểm Tiếng Anh"
+            android:layout_height="wrap_content"
+            android:layout_weight="7"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginVertical="10dp"
+        android:weightSum="10">
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Điểm TB"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/edt_diemTb"
+            android:layout_width="wrap_content"
+            android:hint="Nhập Điểm TB"
+            android:layout_height="wrap_content"
+            android:layout_weight="7"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginVertical="10dp"
+        android:gravity="center"
+        android:weightSum="10">
+        <Button
+            android:id="@+id/luu"
+            android:text="Lưu"
+            android:layout_marginHorizontal="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/thoat"
+            android:text="Thoát"
+            android:layout_marginHorizontal="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</LinearLayout>
