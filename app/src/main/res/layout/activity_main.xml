@@ -15,22 +15,26 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
+            android:text="Nông Quốc Hùng"
             android:textColor="#282828"
-            android:text="Nông Quốc Hùng"/>
+            android:textSize="20dp" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="2050531200154"
             android:layout_marginBottom="30dp"
-            />
+            android:text="2050531200154" />
 
-
-
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:layout_marginBottom="30dp"
+            android:text="Danh sách tác giả :" />
         <ListView
             android:id="@+id/theLV"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent" />
     </LinearLayout>
 
 </RelativeLayout>

@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         tgLV  = (ListView) findViewById(R.id.theLV);
         arrThe = new ArrayList<>();
         arrThe.add(new TacGia("Đồng Kiên Cương","Đồng Kiên Cương được nhận định là người có phong thái siêu thoát, ông xứng đáng được gọi là người không lường. ",R.drawable.tuannguyen));
-        arrThe.add(new TacGia("Nguyễn Tuân","Nguyễn Tuân có sở trường về tùy bút và ký. Ông viết văn với một phong cách tài hoa uyên bác và được xem là bậc thầy trong việc sáng tạo và sử dụng tiếng ...", R.drawable.tuannguyen));
+        arrThe.add(new TacGia("Nguyễn Tuân","Nguyễn Tuân có sở trường về tùy bút và ký. Ông viết văn với một phong cách tài hoa uyên bác và được xem là bậc thầy trong việc sáng tạo và sử dụng tiếng ...", R.drawable.vutrongphung));
 
     }
 }
