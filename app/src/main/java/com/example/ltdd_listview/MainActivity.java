@@ -2,14 +2,18 @@ package com.example.ltdd_listview;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-    ListView theLV;
-    ArrayList<The> arrThe;
+    ListView tgLV;
+    ArrayList<TacGia> arrThe;
     theAdapter adapter;
 
     @Override
@@ -20,18 +24,29 @@ public class MainActivity extends AppCompatActivity {
         anhXa();
 
         adapter = new theAdapter(MainActivity.this,R.layout.dong_the,arrThe);
-        theLV.setAdapter(adapter);
+        tgLV.setAdapter(adapter);
+
+        tgLV.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent = new Intent(MainActivity.this,Details_TG.class);
+                Bundle bundle =  new Bundle();
+                bundle.putInt("imgTG",arrThe.get(i).getImgTG());
+                bundle.putString("tenTG",arrThe.get(i).getTenTG());
+                bundle.putString("motaTG",arrThe.get(i).getMotaTG());
+
+                intent.putExtras(bundle);
+                startActivity(intent);
+            }
+        });
+
     }
 
     private void anhXa() {
-        theLV  = (ListView) findViewById(R.id.theLV);
-        arrThe =new ArrayList<>();
+        tgLV  = (ListView) findViewById(R.id.theLV);
+        arrThe = new ArrayList<>();
+        arrThe.add(new TacGia("Đồng Kiên Cương","Đồng Kiên Cương được nhận định là người có phong thái siêu thoát, ông xứng đáng được gọi là người không lường. ",R.drawable.tuannguyen));
+        arrThe.add(new TacGia("Nguyễn Tuân","Nguyễn Tuân có sở trường về tùy bút và ký. Ông viết văn với một phong cách tài hoa uyên bác và được xem là bậc thầy trong việc sáng tạo và sử dụng tiếng ...", R.drawable.tuannguyen));
 
-        arrThe.add(new The("Sinh nhật",R.drawable.gift));
-        arrThe.add(new The("Giải trí",R.drawable.giaitri));
-        arrThe.add(new The("Nhà giáo Việt Nam",R.drawable.nhagiaovn));
-        arrThe.add(new The("Chào buổi sáng",R.drawable.goodmorning));
-        arrThe.add(new The("Chúc mừng năm mới",R.drawable.newyear));
-        arrThe.add(new The("Valentines",R.drawable.valentines));
     }
 }

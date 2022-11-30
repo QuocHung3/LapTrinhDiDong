@@ -13,22 +13,22 @@ import java.util.List;
 public class theAdapter extends BaseAdapter {
     private Context context;
     private int layout;
-    private List<The> theList;
+    private List<TacGia> tgList;
 
-    public theAdapter(Context context, int layout, List<The> theList) {
+    public theAdapter(Context context, int layout, List<TacGia> theList) {
         this.context = context;
         this.layout = layout;
-        this.theList = theList;
+        this.tgList = theList;
     }
 
     private class ViewHolder{
-        ImageView imgThe;
-        TextView tenThe;
+        ImageView imgTG;
+        TextView tenTG,motaTG;
     }
 
     @Override
     public int getCount() {
-        return theList.size();
+        return tgList.size();
     }
 
     @Override
@@ -50,18 +50,25 @@ public class theAdapter extends BaseAdapter {
             view = inflater.inflate(layout,null);
 
             holder =new ViewHolder();
-            holder.tenThe = (TextView) view.findViewById(R.id.tenThe);
-            holder.imgThe = (ImageView) view.findViewById(R.id.imgThe);
+            holder.tenTG = (TextView) view.findViewById(R.id.tenThe);
+            holder.motaTG = (TextView) view.findViewById(R.id.motaThe);
+            holder.imgTG = (ImageView) view.findViewById(R.id.imgThe);
 
             view.setTag(holder);
         } else {
             holder = (ViewHolder) view.getTag();
         }
 
-        The the = theList.get(i);
+        TacGia the = tgList.get(i);
 
-        holder.tenThe.setText(the.getTenThe());
-        holder.imgThe.setImageResource(the.getImgThe());
+        holder.tenTG.setText(the.getTenTG());
+
+        if (the.getMotaTG().length() >= 20) {
+            String desc = the.getMotaTG().substring(0,25) + "...";
+            holder.motaTG.setText(desc);
+        }
+
+        holder.imgTG.setImageResource(the.getImgTG());
 
 
         return view;
